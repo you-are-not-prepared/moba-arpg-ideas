@@ -1,6 +1,6 @@
 # Thessa, Windrunner
 
-**Status:** proposal (2026-10-24). Names, numbers and talents are placeholders to discuss.
+**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -25,19 +25,22 @@ For **6 / 7 / 8s** her spells **cost no mana** and have **50% shorter cooldowns*
 Cast, reposition, cast again. Strong with fast, cheap spells; the ultimate turns a fight into a spell storm.
 
 ## Ascension (levels 6 / 11 / 18)
-- **A, Gale** (passive): a stronger, longer Tailwind.
-  - A1 Jet Stream: 35% move speed. A2 Updraft: lasts 3s.
-  - A3 Slipstream: Tailwind also gives 20% attack speed. A4 Second Gust: every 3rd spell gives Tailwind twice as long.
-- **B, Hurricane** (ultimate): a longer storm.
-  - B1 Eye Widens: +2s duration. B2 Ceaseless: cooldowns 60% shorter during the storm.
-  - B3 Storm Surge: +15% spell damage during the storm. B4 Calm Before: ultimate cooldown -25%.
-- **C, Skirmisher** (hybrid): hit and run.
+- **A, Gale** (passive, +0.5s Tailwind): a stronger, longer Tailwind.
+  - A1 Jet Stream: +10% Tailwind speed. A2 Updraft: +1s Tailwind.
+  - A3 Slipstream: +20% attack speed during Tailwind. A4 Second Gust: +1.5s Tailwind.
+- **B, Hurricane** (ultimate, +1s storm): a longer storm.
+  - B1 Eye Widens: +2s storm. B2 Charged Air: +15% spell damage.
+  - B3 Ceaseless: cooldowns -10%. B4 Calm Before: ultimate cooldown -25%.
+- **C, Skirmisher** (hybrid, +10% attack speed): hit and run.
   - C1 Quickdraw: +15% attack speed. C2 Light Feet: +10% move speed.
   - C3 Crosswind: +1 projectile on projectile spells. C4 Windward: cooldowns -10%.
 
-## What it needs in the game
-- Almost nothing new: a **timed buff** (like Bloodrush/Haste) that changes move speed, and one that changes mana costs and cooldowns.
-- The quickest of the five to build.
+Changed from the first proposal to fit what talents can do today: A4 (was "every 3rd spell doubles Tailwind"), B2 (was "60% shorter cooldowns during the storm"), B3 (was "+15% spell damage during the storm").
+
+## How it's built (moba-test)
+- **Tailwind:** `TailwindPassive` listens for spell casts; new talent stats `tailwindSpeed`, `tailwindDuration`, `tailwindAttackSpeed`.
+- **Eye of the Storm:** a new spell type `SpellStormSpell` and timed buff `SpellStorm` (temporary cooldown and mana multipliers on the caster, teal ground ring), synced to game-server clients like Bloodrush.
+- **Decided:** the storm doesn't reset cooldowns already running; Tailwind stacks with other speed buffs.
 
 ## Open questions
 - Does Eye of the Storm also reset the cooldowns that are running when it starts?
