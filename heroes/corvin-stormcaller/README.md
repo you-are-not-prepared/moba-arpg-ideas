@@ -1,6 +1,6 @@
 # Corvin, Stormcaller
 
-**Status:** proposal (2026-10-24). Names, numbers and talents are placeholders to discuss.
+**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -25,20 +25,21 @@ A storm cloud follows him for **6s** and strikes a random enemy within **6m** ev
 Spell spam: the more he casts, the more lightning. Pairs naturally with Volley and Fork mods (more hits = more jumps).
 
 ## Ascension (levels 6 / 11 / 18)
-- **A, Overcharge** (passive): charges come more often and jump further.
-  - A1 Capacitor: every 3rd spell is charged. A2 Arc Reach: jump range +2m.
-  - A3 Chain Reaction: jumps hit 2 more enemies. A4 Full Voltage: jumps deal 75% damage.
-- **B, Tempest** (ultimate): a longer, faster storm.
-  - B1 Brewing Storm: +2s duration. B2 Crackling Sky: strikes every 0.4s.
-  - B3 Twin Clouds: two strikes at a time. B4 Eye of Thunder: ultimate cooldown -25%.
-- **C, Conduit** (hybrid): constant casting.
+- **A, Overcharge** (passive, charged every 3rd spell): more lightning.
+  - A1 Arc: +1 chain jump. A2 Voltage: +10% spell damage.
+  - A3 Chain Reaction: +1 chain jump. A4 Full Charge: charged one more cast sooner.
+- **B, Tempest** (ultimate, storm +1s): a longer, more frequent storm.
+  - B1 Brewing Storm: storm +2s. B2 Thunderclap: +15% spell damage.
+  - B3 Gathering Clouds: ultimate cooldown -20%. B4 Eye of Thunder: ultimate cooldown -25%.
+- **C, Conduit** (hybrid, cooldowns -5%): constant casting.
   - C1 Flow: cooldowns -10%. C2 Battery: +150 max mana.
-  - C3 Static Field: spell hits restore 5 mana. C4 Storm Mind: +15% spell damage.
+  - C3 Forked Bolt: +1 projectile. C4 Storm Mind: +15% spell damage.
 
-## What it needs in the game
-- **Chain hits**: a hit that jumps to nearby enemies (also a good mod: "Chain").
-- **An effect that follows the hero** and picks targets by itself (the cloud).
-- A **spell counter** on the hero (every Nth cast), shown on the HUD.
+Changed from the proposal: no jump range, strike speed or "two clouds" talents, and no mana on hit (talents can't do those yet). The charged spell isn't marked on the HUD yet.
+
+## How it's built (moba-test)
+- **Static Charge:** `StaticCharge` counts casts; a charged projectile spell chains (new `Chain` in `SpellProjectile`) with `LightningBolt` flashes, shown on clients through the game server.
+- **Thunderhead:** a new spell type `StormCloudSpell` and timed buff `StormCloud` (a cloud above him, strikes heroes first), synced to clients like Bloodrush.
 
 ## Open questions
 - Should the cloud prefer heroes, or the closest enemy?

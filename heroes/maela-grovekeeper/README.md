@@ -1,6 +1,6 @@
 # Maela, Grovekeeper
 
-**Status:** proposal (2026-10-24). Names, numbers and talents are placeholders to discuss.
+**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -25,21 +25,22 @@ A grove (radius 5m, cast range 8m) for **6s**. Allies inside heal **4% of max he
 The first real support: keeps a lane partner or the whole team alive, and turns team fights with Sanctuary. Damage spells are how she heals, so she still fights.
 
 ## Ascension (levels 6 / 11 / 18)
-- **A, Lifebloom** (passive): stronger and wider healing.
-  - A1 Deep Roots: 25% of damage as healing. A2 Wide Canopy: heals the 2 nearest allies.
-  - A3 Overgrowth: healing above full health becomes a 100-health shield. A4 Kinship: heals herself for half as much.
-- **B, Sacred Grove** (ultimate): a bigger, longer grove.
-  - B1 Spreading Roots: radius +1.5m. B2 Old Growth: +2s duration.
-  - B3 Thorned Grove: enemies inside take 30 damage per second. B4 Evergreen: ultimate cooldown -25%.
-- **C, Warden of the Wild** (hybrid): a battle healer.
-  - C1 Barkskin: +200 max health. C2 Sap: her attacks also heal the nearest ally.
-  - C3 Wildgrowth: +15% spell damage (so more healing). C4 Swiftwood: +10% move speed.
+- **A, Lifebloom** (passive, +5% healing): stronger healing.
+  - A1 Deep Roots: +10% healing. A2 Wildgrowth: +10% spell damage (so more healing).
+  - A3 Full Bloom: +10% healing. A4 Barkskin: +200 max health.
+- **B, Sacred Grove** (ultimate, grove +1s): a longer, more frequent grove.
+  - B1 Old Growth: grove +2s. B2 Quick Sprouts: ultimate cooldown -15%.
+  - B3 Seasons: cooldowns -10%. B4 Evergreen: ultimate cooldown -25%.
+- **C, Warden of the Wild** (hybrid, +150 max health): a sturdy support.
+  - C1 Thorns: +10 attack damage. C2 Swiftwood: +8% move speed.
+  - C3 Sap: +150 max mana. C4 Ironbark: +25 max health per level.
 
-## What it needs in the game
-- **Healing allies** (today only the fountain heals), with green "+50" pop-ups.
-- **An area on the ground** that affects allies and enemies differently.
-- **Slow** (shared with Ilsa), a **shield** (A3).
-- Bots: a support bot should stay near allies.
+Changed from the proposal: no healing of two allies, no shield, no damaging grove (talents can't do those yet). The grove heals allied heroes only, not creeps.
+
+## How it's built (moba-test)
+- **Verdant Bond:** `SpellHitPassive` (shared with Ilsa) heals the nearest allied hero when her spells hit.
+- **Sanctuary:** the same `ZoneSpell` as Ilsa's prison, set up as a healing, speeding grove that slows enemies.
+- No healing pop-ups yet (health bars show it).
 
 ## Open questions
 - Should healing be shown to everyone (pop-ups over allies) or only to her?

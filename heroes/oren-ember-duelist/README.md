@@ -1,6 +1,6 @@
 # Oren, Ember Duelist
 
-**Status:** proposal (2026-10-24). Names, numbers and talents are placeholders to discuss.
+**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -25,20 +25,21 @@ Leaps up to **6m** to a point, dealing **150 / 225 / 300** damage around where h
 Dives onto a target, sticks to it and wins long fights as Heat builds up. A second melee hero next to Torvald (tank) and Nyx (assassin).
 
 ## Ascension (levels 6 / 11 / 18)
-- **A, Wildfire** (passive): faster Heat, bigger bursts.
-  - A1 Stoke: bursts at 4 stacks. A2 Flashpoint: burst radius +1m.
-  - A3 Inferno: bursts deal double damage to heroes. A4 Slow Burn: Heat lasts 6s without attacking.
-- **B, Meteor** (ultimate): further leaps, longer burns.
-  - B1 Long Jump: leap range +3m. B2 Scorched Earth: the landing leaves a burning area for 3s.
-  - B3 Afterburn: attacks burn for 3s longer after leaping. B4 Second Wind: ultimate cooldown -25%.
-- **C, Phoenix** (hybrid): sustain.
-  - C1 Cauterise: heals for 10% of his burn damage. C2 Fireproof: +200 max health.
-  - C3 Rising Heat: +20 attack damage. C4 Rekindle: after a kill, Heat is set to 5.
+- **A, Wildfire** (passive, +25 Heat burst damage): bigger bursts.
+  - A1 Flashpoint: +25 burst damage. A2 Stoke: +10% attack speed.
+  - A3 Inferno: +50 burst damage. A4 Forge Heart: +200 max health.
+- **B, Meteor** (ultimate, burning attacks +2s): leap more often, burn longer.
+  - B1 Quick Ignition: ultimate cooldown -20%. B2 Scorch: +15% spell damage (the landing).
+  - B3 Afterburn: burning attacks +3s. B4 Second Wind: ultimate cooldown -25%.
+- **C, Phoenix** (hybrid, +150 max health): a sturdier fighter.
+  - C1 Searing Edge: +15 attack damage. C2 Ember Stride: +8% move speed.
+  - C3 Rebirth: +30 max health per level. C4 Sunfire: +25 attack damage.
 
-## What it needs in the game
-- **A leap/dash**: the first ability that moves a hero. On the game server it must look smooth (it lands exactly where the server says).
-- **Stacks on a hero** (Heat), shown on the HUD (e.g. pips under the portrait).
-- **Attacks that burn**, and an area burst on an attack (melee swing already exists).
+Changed from the proposal to fit what talents can do today: no burst radius, no healing from burns, no "Heat on kill"; the leap can't go over rocks (it lands on walkable ground).
+
+## How it's built (moba-test)
+- **Kindled Blade:** `KindledBlade` counts hits through a new `Attacker.Hit` event; the burst uses the fire explosion.
+- **Blazing Leap:** a new spell type `LeapSpell` and movement `Leap` (an arc; the agent is warped on landing; orders wait until it lands), then the timed buff `BurningBlades`. On the game server the arc reaches clients through the position sync.
 
 ## Open questions
 - Can he leap over walls (rocks), or only along walkable ground?

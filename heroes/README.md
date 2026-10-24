@@ -4,7 +4,7 @@ Hero concepts: passive, ultimate, ascension paths, playstyle and visual identity
 
 The hero proposal template from Discord is a good starting point for a hero's README.
 
-## Proposals
+## Proposals (all five implemented in moba-test, 2026-10-24)
 
 | Hero | Role | Damage type | Passive | Ultimate |
 |---|---|---|---|---|
@@ -18,4 +18,4 @@ Each new hero covers one damage type from the [spell affinity](../game-mechanics
 
 **Mechanics they'd add**, which also serve as building blocks for new spells and mods: slows (Ilsa, Maela), healing allies and areas on the ground (Maela, Ilsa), chain hits and an effect that follows the hero (Corvin), a leap/dash (Oren), and temporary cooldown/mana changes (Thessa).
 
-**Suggested build order:** Thessa (almost everything exists), Oren (second melee hero, first dash), Ilsa (slows), Maela (healing), Corvin (chains).
+**Built in this order:** Thessa, Oren, Ilsa, Maela, Corvin. Each page lists the talents as built and what changed from the proposal.
