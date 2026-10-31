@@ -1,6 +1,6 @@
 # Ilsa, Frostwarden
 
-**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
+**Status:** implemented in moba-arpg-game (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -37,7 +37,7 @@ Controls fights from range: slows whoever she hits, then locks a group down for 
 
 Changed from the proposal: the 10% bonus applies to all of her damage against slowed enemies (not spell damage from anyone); no "slowed 3 times → frozen"; no prison radius talent.
 
-## How it's built (moba-test)
+## How it's built (moba-arpg-game)
 - **Slow:** a new status `Slow` (like stun and burn), synced to game-server clients and shown as an icy border on health bars.
 - **Chilling Touch:** `SpellHitPassive` reacts to her spell hits (new `SpellEvents.Hit`).
 - **Glacial Prison:** a new reusable spell type `ZoneSpell` with `GroundZone` (warning ring, freeze, slowing field), shown on clients through the game server.

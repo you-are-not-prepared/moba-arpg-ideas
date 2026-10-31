@@ -1,6 +1,6 @@
-# moba-ideas
+# moba-arpg-ideas
 
-Ideas and concepts for the MOBA (game: `moba-test`, backend: `moba-backend`): proposals, sketches, diagrams and design notes, before anything gets built. Nothing here is final; it's the place to collect and discuss ideas.
+Ideas and concepts for the MOBA (game: `moba-arpg-game`, backend: `moba-arpg-backend`): proposals, sketches, diagrams and design notes, before anything gets built. Nothing here is final; it's the place to collect and discuss ideas.
 
 ## Folders
 

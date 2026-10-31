@@ -1,6 +1,6 @@
 # Maela, Grovekeeper
 
-**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
+**Status:** implemented in moba-arpg-game (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -37,7 +37,7 @@ The first real support: keeps a lane partner or the whole team alive, and turns 
 
 Changed from the proposal: no healing of two allies, no shield, no damaging grove (talents can't do those yet). The grove heals allied heroes only, not creeps.
 
-## How it's built (moba-test)
+## How it's built (moba-arpg-game)
 - **Verdant Bond:** `SpellHitPassive` (shared with Ilsa) heals the nearest allied hero when her spells hit.
 - **Sanctuary:** the same `ZoneSpell` as Ilsa's prison, set up as a healing, speeding grove that slows enemies.
 - No healing pop-ups yet (health bars show it).

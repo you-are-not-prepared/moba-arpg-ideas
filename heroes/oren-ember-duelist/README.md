@@ -1,6 +1,6 @@
 # Oren, Ember Duelist
 
-**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
+**Status:** implemented in moba-arpg-game (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -37,7 +37,7 @@ Dives onto a target, sticks to it and wins long fights as Heat builds up. A seco
 
 Changed from the proposal to fit what talents can do today: no burst radius, no healing from burns, no "Heat on kill"; the leap can't go over rocks (it lands on walkable ground).
 
-## How it's built (moba-test)
+## How it's built (moba-arpg-game)
 - **Kindled Blade:** `KindledBlade` counts hits through a new `Attacker.Hit` event; the burst uses the fire explosion.
 - **Blazing Leap:** a new spell type `LeapSpell` and movement `Leap` (an arc; the agent is warped on landing; orders wait until it lands), then the timed buff `BurningBlades`. On the game server the arc reaches clients through the position sync.
 

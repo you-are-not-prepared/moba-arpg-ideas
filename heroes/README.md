@@ -4,7 +4,7 @@ Hero concepts: passive, ultimate, ascension paths, playstyle and visual identity
 
 The hero proposal template from Discord is a good starting point for a hero's README.
 
-## Proposals (all five implemented in moba-test, 2026-10-24)
+## Proposals (all five implemented in moba-arpg-game, 2026-10-24)
 
 | Hero | Role | Damage type | Passive | Ultimate |
 |---|---|---|---|---|

@@ -1,6 +1,6 @@
 # Corvin, Stormcaller
 
-**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
+**Status:** implemented in moba-arpg-game (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -37,7 +37,7 @@ Spell spam: the more he casts, the more lightning. Pairs naturally with Volley a
 
 Changed from the proposal: no jump range, strike speed or "two clouds" talents, and no mana on hit (talents can't do those yet). The charged spell isn't marked on the HUD yet.
 
-## How it's built (moba-test)
+## How it's built (moba-arpg-game)
 - **Static Charge:** `StaticCharge` counts casts; a charged projectile spell chains (new `Chain` in `SpellProjectile`) with `LightningBolt` flashes, shown on clients through the game server.
 - **Thunderhead:** a new spell type `StormCloudSpell` and timed buff `StormCloud` (a cloud above him, strikes heroes first), synced to clients like Bloodrush.
 

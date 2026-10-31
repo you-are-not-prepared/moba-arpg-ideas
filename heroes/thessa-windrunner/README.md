@@ -1,6 +1,6 @@
 # Thessa, Windrunner
 
-**Status:** implemented in moba-test (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
+**Status:** implemented in moba-arpg-game (2026-10-24). Numbers and talents are first versions to tune; the talents below are what the game has.
 
 | | |
 |---|---|
@@ -37,7 +37,7 @@ Cast, reposition, cast again. Strong with fast, cheap spells; the ultimate turns
 
 Changed from the first proposal to fit what talents can do today: A4 (was "every 3rd spell doubles Tailwind"), B2 (was "60% shorter cooldowns during the storm"), B3 (was "+15% spell damage during the storm").
 
-## How it's built (moba-test)
+## How it's built (moba-arpg-game)
 - **Tailwind:** `TailwindPassive` listens for spell casts; new talent stats `tailwindSpeed`, `tailwindDuration`, `tailwindAttackSpeed`.
 - **Eye of the Storm:** a new spell type `SpellStormSpell` and timed buff `SpellStorm` (temporary cooldown and mana multipliers on the caster, teal ground ring), synced to game-server clients like Bloodrush.
 - **Decided:** the storm doesn't reset cooldowns already running; Tailwind stacks with other speed buffs.
