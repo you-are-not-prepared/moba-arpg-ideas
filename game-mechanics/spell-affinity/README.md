@@ -1,6 +1,15 @@
 # Spell affinity
 
-**Status:** idea, under discussion (Discord, spells-and-mods / game-mechanics).
+**Status:** being built in moba-arpg-game (started 2026-11-02).
+- **Phase 1 (done):** damage types, hero affinities, base type, spell colours, ±10% matchups.
+- **Phase 2:** shop spells that take the hero's look.
+- **Phase 3:** the hero kit rework (see [hero-kit-rework](../hero-kit-rework/)).
+
+**Decided for the game (2026-11-02):**
+- **Matchup cycle:** follows the hexagon clockwise: **Fire > Frost > Nature > Lightning > Physical > Air > Fire**. A typed hit on a hero deals +10% if its type beats the hero's base type and −10% if it's beaten. Status effects per element may come later.
+- **What it compares against:** the target hero's base type. Creeps, towers and cores take every type normally.
+- **Auto attacks:** stay untyped, with no matchup and no affinity.
+- **Base type:** each hero's highest affinity.
 
 ## The problem
 
