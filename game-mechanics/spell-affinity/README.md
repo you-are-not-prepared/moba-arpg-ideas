@@ -2,7 +2,7 @@
 
 **Status:** being built in moba-arpg-game (started 2026-11-02).
 - **Phase 1 (done):** damage types, hero affinities, base type, spell colours, ±10% matchups.
-- **Phase 2:** shop spells that take the hero's look.
+- **Phase 2 (done):** shop spells that take the hero's look: Projectile (Fireball, Ice Shard, Thorn, Spark, Arrow, Wind Blade), Burst, Cleave and Lunge.
 - **Phase 3:** the hero kit rework (see [hero-kit-rework](../hero-kit-rework/)).
 
 **Decided for the game (2026-11-02):**
