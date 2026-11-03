@@ -11,6 +11,8 @@
 - **Auto attacks:** stay untyped, with no matchup and no affinity.
 - **Base type:** each hero's highest affinity.
 
+**Changed 2026-11-04:** affinities are now called **resistances** in the game, and they only change the damage a hero **takes** (+25% Fire = takes 25% less Fire damage, −20% Frost = takes 20% more), not what it deals. Hits now show damage numbers in their type's colour.
+
 ## The problem
 
 Spells are bought in the shop and any hero can use any of them. That keeps builds open, but it blurs hero identity: a frost mage throwing a Fireball looks wrong, and with several players using the same spell, everything looks alike.
