@@ -3,7 +3,7 @@
 **Status:** being built in moba-arpg-game (started 2026-11-02).
 - **Phase 1 (done):** damage types, hero affinities, base type, spell colours, ±10% matchups.
 - **Phase 2 (done):** shop spells that take the hero's look: Projectile (Fireball, Ice Shard, Thorn, Spark, Arrow, Wind Blade), Burst, Cleave and Lunge.
-- **Phase 3:** the hero kit rework (see [hero-kit-rework](../hero-kit-rework/)).
+- **Phase 3 (done):** the hero kit rework (see [hero-kit-rework](../hero-kit-rework/)).
 
 **Decided for the game (2026-11-02):**
 - **Matchup cycle:** follows the hexagon clockwise: **Fire > Frost > Nature > Lightning > Physical > Air > Fire**. A typed hit on a hero deals +10% if its type beats the hero's base type and −10% if it's beaten. Status effects per element may come later.

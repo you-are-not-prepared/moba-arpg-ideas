@@ -19,3 +19,5 @@ Each new hero covers one damage type from the [spell affinity](../game-mechanics
 **Mechanics they'd add**, which also serve as building blocks for new spells and mods: slows (Ilsa, Maela), healing allies and areas on the ground (Maela, Ilsa), chain hits and an effect that follows the hero (Corvin), a leap/dash (Oren), and temporary cooldown/mana changes (Thessa).
 
 **Built in this order:** Thessa, Oren, Ilsa, Maela, Corvin. Each page lists the talents as built and what changed from the proposal.
+
+**Kit rework (2026-11-02):** every hero now starts with a signature spell and chooses one of three ultimates at level 6 (see [hero-kit-rework](../game-mechanics/hero-kit-rework/)). The ultimates described on these pages are one of the three options; the ascension talents listed here were replaced.

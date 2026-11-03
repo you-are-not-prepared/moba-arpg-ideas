@@ -1,6 +1,19 @@
 # Hero kit rework
 
-**Status:** idea, to discuss (2026-10-25). Nothing here is built yet.
+**Status:** built in moba-arpg-game (2026-11-02), as phase 3 of the damage-type rework. Numbers and talents are first versions to tune.
+
+## As built
+
+- **Signature spell:** every hero starts with their own basic spell in Q. It takes the hero's damage type and look, sells back at full price (300), and only that hero's shop sells it again. Answer to open question 1: it's a normal spell the player can move or sell.
+- **Choose your ultimate at level 6:** three cards, two ultimates unique to the hero plus one shared by every hero with the same base damage type and range (melee/ranged). Answers to questions 2–3: a mix of unique and shared, three choices.
+  - The shared ultimates are Arrow Storm (Physical ranged), Whirlwind (Physical melee), Thunderstrike (Lightning ranged), Meteor (Fire ranged), Inferno (Fire melee), Cyclone (Air ranged), Blizzard (Frost ranged) and Overgrowth (Nature ranged).
+- **Levels 11 and 16:** two talents each, and every talent improves the chosen ultimate (damage, cooldown, duration, area or stun) **and** the passive.
+- **Ascension points:** ascensions happen at 6/11/16 (question 6), give no skill point, and each raises the ultimate's rank. R is reserved for the ultimate.
+- **Bots:** pick at random (question 5).
+- **Existing trees:** rewritten (question 7); every hero's original ultimate became one of its three options.
+- **Damage types:** built first, as suggested (see [spell-affinity](../spell-affinity/)).
+
+The full kits are in the moba-arpg-game README (Heroes and Ascension sections).
 
 ## Summary
 
